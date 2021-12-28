@@ -4,9 +4,11 @@ ${Subcriber_num}      id:subscriberId
 ${Type_Token}         id:tokenType
 ${copy_Token}         id:token
 ${BrowseTopics}         id:BrowseTopics
+${ChatNow}              id:ChatNow
 #Internet
 ${Internet}                     Xpath://*[@id="internet"]/div[1]/h4/a
 ${notcontInt}                   Xpath://*[@id="leftTroubleShooter"]/li[1]/a
+${Keeps_going}                   Xpath://*[@id="leftTroubleShooter"]/li[2]/a
 ${Modem_on_off}                 xpath://*[@id="modemForm"]/div[1]/label/span
 ${PowerLight}                   xpath://*[@id="powerLightForm"]/div[2]/label/span
 ${WanLight}                     xpath://*[@id="powerForm"]/div[1]/label/span
@@ -19,10 +21,12 @@ ${modem_Light_Img}              xpath://*[@id="workflow-form"]/div[2]/p/img
 ${Continue_Button}              id:button
 ${Continue}                    id:continueBtn
 ${Exit_Button}                 id:Exit
+${Tryagainlater}               id:Tryagainlater
 ${ContinueTroubleshooting}     id:ContinueTroubleshooting
 ${Continue_1}                  id:Continue
 ${OFF}                         id:OFF
 ${Internetisalsonotworking}     id:Internetisalsonotworking
+${YesIcanmakecalls}             id:YesIcanmakecalls
 #Outage
 ${YesRequestNotifications}          id:YesRequestNotifications
 ${textNotification}                 id:textNotification
@@ -48,13 +52,14 @@ ${Confirm}                     id:Confirm
 ${Serviceisworkingnow}         id:Serviceisworkingnow
 ${Noskiptonextrepair}           id:Noskiptonextrepair
 ${Nocontinue}                   id:Nocontinue
-
 #Voice
-${Voice}                    xpath://*[@id="voice"]/div[1]/h4/a
+#${Voice}                    xpath://*[@id="voice"]/div[1]/h4/a
+${Voice}                     xpath://*[@id="voice"]/div[1]/h4/a/i
 ${ONorFlashinggreen}            id:ONorFlashinggreen
 ${NO_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[2]/label/span
 ${Yes_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[1]/label/span
 ${Noise}                    xpath://*[@id="leftTroubleShooter"]/li[6]/a
+${Not_Reciving}             xpath://a[@_mce_href="#sscTest/SSC_CBC"]
 ${No_Dial_Tune}             xpath://a[@_mce_href="#sscTest/SSC_NDT"]
 ${Cant_Call_Out}            xpath://a[@_mce_href="#sscTest/SSC_CCO"]
 ${NoNoiseallcalls}          id:NoNoiseonallcalls
@@ -63,6 +68,7 @@ ${Allphones}                id:Allphones
 ${AllPhone}                 xpath://*[@id="AllPhones"]
 ${Onlywhenitrains}          id:Onlywhenitrains
 ${ScheduleNow}              id:ScheduleNow
+${ScheduleLater}            id:ScheduleLater
 ${Addplannowandscheduletechnician}         id:Addplannowandscheduletechnician
 ${Schedulenowandacceptpossiblecharges}     id:Schedulenowandacceptpossiblecharges
 ${Yes}                      id:Yes
@@ -91,3 +97,19 @@ ${Theproblemisisolatedtoonejack}        id:Theproblemisisolatedtoonejack
 ${CenturyLink_modem}             Xpath://*[@id="workflow-form"]/div[2]/div[1]/label/span
 ${CenturyLink_modem_Router}             Xpath://*[@id="workflow-form"]/div[2]/div[2]/label/span
 ${Non_CenturyLink_modem}             Xpath://*[@id="workflow-form"]/div[2]/div[3]/label/span
+
+
+#CBCC
+${Unabletochangeinupdatecenter}         id:Unabletochangeinupdatecenter
+${First_radio}              xpath://*[@id="workflow-question"]/div[2]/div[1]/label/span
+${Second_radio}             xpath://*[@id="workflow-question"]/div[2]/div[2]/label/span
+${Third_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
+${Fourth_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
+${fifith_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
+${Sixth_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
+
+
+
+
+
+

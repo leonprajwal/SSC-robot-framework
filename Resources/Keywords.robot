@@ -22,8 +22,8 @@ Verify the Opening Content
 
 open a ssc Application
    Launch a ssc Application
-   #Wait For Text       select the type of issue you are having
-   Wait for text    Which service issue are you having?
+   Wait For Text       select the type of issue you are having
+  # Wait for text    Which service issue are you having?
 
 Launch a ssc Application
    open Chrome browser
@@ -140,7 +140,8 @@ Click Element and Take ScreenShot
     ${But_Text}=    Get Text     ${Element}
     Log to console    ${But_Text}
     Log to console    ${But_Value}
-    Take Screenshot     ${EXECDIR}/ScreenShots/Clicked
+    #${testcase}=    Get Testcase Name
+    Take Screenshot     ${EXECDIR}/ScreenShots/${testcase}click
     Click Element   ${Element}
 
 Cancel the appointment
@@ -169,7 +170,7 @@ I Reschedule and cancel appointment
 Wait for text
      [Arguments]     ${Text}
      Wait until Keyword succeeds     3min    2ms     Page Should Contain       ${Text}
-     Take Screenshot     ${EXECDIR}/ScreenShots/Text
+     Take Screenshot     ${EXECDIR}/ScreenShots/${testcase}Text
      
 My internet isn't connected
    Click Element and Take ScreenShot      ${Internet}
