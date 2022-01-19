@@ -11,12 +11,14 @@ Suite Teardown   Run Keywords    Remove screenshots from Output
 #...    AND       Empty Directory    ${Screenshot_Output}
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+TC1 NDTE Prompt Verify
+    NDTE Start flow
+    NDTE TN programmed in switch for Voice
 
-*** Keywords ***
-Provided precondition
-    Setup system under test
+TC2 NDTE Prompt Verify
+    NDTE Start flow
+    NDTE Will Chat Later prompt 18
+
+TC3 NDTE Prompt Verify
+    NDTE Start flow
+    NDTE Will Chat Later prompt 17
