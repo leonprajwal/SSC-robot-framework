@@ -6,7 +6,7 @@ ${copy_Token}         id:token
 ${BrowseTopics}         id:BrowseTopics
 ${ChatNow}              id:ChatNow
 #Internet
-${Internet}                     Xpath://*[@id="internet"]/div[1]/h4/a
+${Internet}                     Xpath://*[@id="internet"]/div[1]/h4/a/i
 ${notcontInt}                   Xpath://*[@id="leftTroubleShooter"]/li[1]/a
 ${Keeps_going}                   Xpath://*[@id="leftTroubleShooter"]/li[2]/a
 ${Modem_on_off}                 xpath://*[@id="modemForm"]/div[1]/label/span
@@ -22,16 +22,22 @@ ${Continue_Button}              id:button
 ${Continue}                    id:continueBtn
 ${Exit_Button}                 id:Exit
 ${Tryagainlater}               id:Tryagainlater
+${Tryagain}               id:TryAgain
 ${ContinueTroubleshooting}     id:ContinueTroubleshooting
 ${Continue_1}                  id:Continue
 ${OFF}                         id:OFF
 ${Internetisalsonotworking}     id:Internetisalsonotworking
 ${YesIcanmakecalls}             id:YesIcanmakecalls
+${pin1_loc}         id:ssnNumber1
+${pin2_loc}         id:ssnNumber2
+${pin3_loc}         id:ssnNumber3
+${pin4_loc}         id:ssnNumber4
 #Outage
 ${YesRequestNotifications}          id:YesRequestNotifications
 ${textNotification}                 id:textNotification
 ${outageNotificationText}           id:outageNotificationText
 ${submitWithoutNotificationButton}          id:submitWithoutNotificationButton
+${Submit}                   id:Submit
 ${Noskiptoscheduledrepair}              id:Noskiptoscheduledrepair
 #Schedule ticket
 ${Hear other voices}         xpath://*[@id="workflow-question"]/div[2]/div[5]/label/span
@@ -62,6 +68,7 @@ ${Noise}                    xpath://*[@id="leftTroubleShooter"]/li[6]/a
 ${Not_Reciving}             xpath://a[@_mce_href="#sscTest/SSC_CBC"]
 ${No_Dial_Tune}             xpath://a[@_mce_href="#sscTest/SSC_NDT"]
 ${Cant_Call_Out}            xpath://a[@_mce_href="#sscTest/SSC_CCO"]
+${My_Wireless}              xpath://a[@_mce_href="#sscTest/SSC_WIRELESS_FROM_LANDING"]
 ${NoNoiseallcalls}          id:NoNoiseonallcalls
 ${Dialtonewithnoise}        id:Dialtonewithnoise
 ${Allphones}                id:Allphones
@@ -93,7 +100,8 @@ ${Nodialtoneonallphones}        id:Nodialtoneonallphones
 ${YesIhavepower}            id:YesIhavepower
 ${RunTest}                  id:RunTest
 ${Theproblemisisolatedtoonejack}        id:Theproblemisisolatedtoonejack
-
+${Modem_wireless}            id:Modemwireless
+${Cell_Phone_wireless}       id:Cell_Phone_wireless
 ${CenturyLink_modem}             Xpath://*[@id="workflow-form"]/div[2]/div[1]/label/span
 ${CenturyLink_modem_Router}             Xpath://*[@id="workflow-form"]/div[2]/div[2]/label/span
 ${Non_CenturyLink_modem}             Xpath://*[@id="workflow-form"]/div[2]/div[3]/label/span

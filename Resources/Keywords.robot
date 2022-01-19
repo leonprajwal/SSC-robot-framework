@@ -22,8 +22,8 @@ Verify the Opening Content
 
 open a ssc Application
    Launch a ssc Application
-   Wait For Text       select the type of issue you are having
-  # Wait for text    Which service issue are you having?
+   #Wait For Text       select the type of issue you are having
+   Wait for text    Which service issue are you having?
 
 Launch a ssc Application
    open Chrome browser
@@ -67,9 +67,9 @@ Schedule a Appointment
     #${Tn_Type}=       Check the TN type
     #Run Keyword IF    '${Tn_Type}'=='L-CTL' Schedule a technician for Ensable
 #    Schedule a technician for onlyphone cris
-#    Wait for text     technician visit
-#    Sleep    5s
-#    Click Element and Take ScreenShot     ${Continue_Button}
+    Wait for text     technician visit
+    Sleep    5s
+    Click Element and Take ScreenShot     ${Continue_Button}
     Wait for text       Checking history
     Wait for text       Finding appointment
     Yes Schedule a appointment
@@ -212,10 +212,13 @@ I Hear a noise while using phone - ensable
     Click Element and Take ScreenShot     ${Onlywhenitrains}
     Wait for text      We recommend a technician visit
     Click Element and Take ScreenShot     ${ScheduleNow}
+    Sleep   5s
+    Wait for text     Ticket Creation Type :DISPATCH
+    Click Element and Take ScreenShot     ${Continue_Button}
     Schedule a Appointment
 
 Voice Flow all calls - cris
-     Sleep    5s
+     Sleep    10s
     Click Element and Take ScreenShot     ${Voice}
     Sleep   5s
     Click Element and Take ScreenShot      ${Noise}
@@ -234,6 +237,7 @@ I Hear a noise while using phone -Cris
     Click Element and Take ScreenShot       ${Interferencesourcenotidentified}
     Wait for text     There appears to be a problem with the wiring inside your home.
     Click Element and Take ScreenShot     ${ScheduleNow}
+    Sleep   5s
     Wait for text     Ticket Creation Type :DISPATCH
     Click Element and Take ScreenShot     ${Continue_Button}
     Schedule a Appointment

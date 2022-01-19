@@ -5,7 +5,7 @@ Suite Setup      Run Keywords       Delete Screenshots
 ...     AND      Token Genaration
 Test Setup    Given open a ssc Application       # Launch a ssc Application
 Test Teardown    Run Keywords       Error ScreenShot
-...    AND       Close Browser
+#...    AND       Close Browser
 Suite Teardown   Run Keywords    Remove screenshots from Output
 #...    AND       Empty Directory    ${Screenshot_Output}
 
@@ -15,8 +15,9 @@ Suite Teardown   Run Keywords    Remove screenshots from Output
 
 TC1 HCKP century link modem NO flow(browse and HCNB)
     HCKP start flow
-    HCKP Centrury Link Modem    ${CenturyLink_modem_Router} 
-    HCKP Centrury Link No flow    ${Yes}    ${Yes}
+    HCKP Centrury Link Modem    ${CenturyLink_modem_Router}
+    compare_images
+    #HCKP Centrury Link No flow    ${Yes}    ${Yes}
     #Exit Flow
     #BrowseTopics Flow
 
