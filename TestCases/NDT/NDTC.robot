@@ -6,7 +6,7 @@ Suite Setup      Run Keywords       Delete Screenshots
 ...     AND      Token Genaration
 Test Setup    Given open a ssc Application       # Launch a ssc Application
 Test Teardown    Run Keywords       Error ScreenShot
-#...    AND       Close Browser
+...    AND       Close Browser
 Suite Teardown   Run Keywords    Remove screenshots from Output
 #...    AND       Empty Directory    ${Screenshot_Output}
 

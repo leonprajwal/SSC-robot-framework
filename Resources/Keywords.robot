@@ -22,8 +22,8 @@ Verify the Opening Content
 
 open a ssc Application
    Launch a ssc Application
-   #Wait For Text       select the type of issue you are having
-   Wait for text    Which service issue are you having?
+   Wait For Text       select the type of issue you are having
+   #Wait for text    Which service issue are you having?
 
 Launch a ssc Application
    open Chrome browser

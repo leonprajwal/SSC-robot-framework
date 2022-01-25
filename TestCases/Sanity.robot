@@ -2,10 +2,10 @@
 Resource    ../Resources/Config.robot
 Suite Setup      Run Keywords       Delete Screenshots
 ...     AND      Token Genaration
-Test Setup    Given Launch a ssc Application        #open a ssc Application
+#Test Setup    Given open a ssc Application
 Test Teardown    Error ScreenShot
 Suite Teardown   Run Keywords    Remove screenshots from Output
-...    AND       Close Browser
+#...    AND       Close Browser
 
 
 *** Test Cases ***
@@ -15,16 +15,15 @@ Suite Teardown   Run Keywords    Remove screenshots from Output
 #    ...    ELSE IF    '${Tn_Type}'=='L-CTL'    Sanity on Voice Flow Ensable
 #
 #*** Keywords ***
+OPEN SSC
+    open a ssc Application
 
 Sanity on Voice Flow CRIS
     [Tags]    Santiy Check on Noise
-    #When I Hear a noise while using phone -Cris
- #   Then I Reschedule and cancel appointment
-    Reschedule a appointment
-      #Cancel the appointment
-
-
-
+    When I Hear a noise while using phone -Cris
+    #Then I Reschedule and cancel appointment
+#    Reschedule a appointment
+#    Cancel the appointment
 
 Santiy on CCO Cris
     When I am not able to call out-cris
@@ -37,7 +36,7 @@ Santiy on CCO Ensable
 Sanity on Voice Flow Ensable
     [Tags]    Santiy Check on Noise
     When I Hear a noise while using phone - ensable
-    Then I Reschedule and cancel appointment
+    #Then I Reschedule and cancel appointment
 
 Sanity on NDT Flow Cris
     When I have no dial tone

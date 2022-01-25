@@ -100,6 +100,7 @@ ${Nodialtoneonallphones}        id:Nodialtoneonallphones
 ${YesIhavepower}            id:YesIhavepower
 ${RunTest}                  id:RunTest
 ${Theproblemisisolatedtoonejack}        id:Theproblemisisolatedtoonejack
+${WillChatLatertoSchedule}              id:WillChatLatertoSchedule
 ${Modem_wireless}            id:Modemwireless
 ${Cell_Phone_wireless}       id:Cell_Phone_wireless
 ${CenturyLink_modem}             Xpath://*[@id="workflow-form"]/div[2]/div[1]/label/span
