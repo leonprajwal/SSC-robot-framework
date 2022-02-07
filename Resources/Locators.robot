@@ -64,13 +64,14 @@ ${Voice}                     xpath://*[@id="voice"]/div[1]/h4/a/i
 ${ONorFlashinggreen}            id:ONorFlashinggreen
 ${NO_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[2]/label/span
 ${Yes_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[1]/label/span
-${Noise}                    xpath://*[@id="leftTroubleShooter"]/li[6]/a
+${Noise}                    xpath://a[@_mce_href="#sscTest/SSC_NOL"]
 ${Not_Reciving}             xpath://a[@_mce_href="#sscTest/SSC_CBC"]
 ${No_Dial_Tune}             xpath://a[@_mce_href="#sscTest/SSC_NDT"]
 ${Cant_Call_Out}            xpath://a[@_mce_href="#sscTest/SSC_CCO"]
 ${My_Wireless}              xpath://a[@_mce_href="#sscTest/SSC_WIRELESS_FROM_LANDING"]
 ${NoNoiseallcalls}          id:NoNoiseonallcalls
 ${Dialtonewithnoise}        id:Dialtonewithnoise
+
 ${Allphones}                id:Allphones
 ${AllPhone}                 xpath://*[@id="AllPhones"]
 ${Onlywhenitrains}          id:Onlywhenitrains
@@ -85,6 +86,8 @@ ${Allcalls}                 id:Allcalls
 ${Cordlessphoneonly}        id:Cordlessphoneonly
 ${Cordlessandcordedphones}      id:Cordlessandcordedphones
 #${Hear other voices}            id:Hear other voices
+${RetryTest}                    id:RetryTest
+
 ${CanReceiveCalls}          id:CanReceiveCalls
 ${OnePhone}                 id:OnePhone
 ${NotCordless}              id:NotCordless

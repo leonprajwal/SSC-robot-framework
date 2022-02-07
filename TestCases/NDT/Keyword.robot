@@ -15,6 +15,20 @@ NDT prompt 10 flow
     Wait For Text       Retrieving line test results
     Sleep     10s
 
+NDT_MLT prompt 10 flow
+    Sleep    10s
+    Click Element and Take ScreenShot     ${Voice}
+    Sleep   5s
+    Click Element and Take ScreenShot      ${No_Dial_Tune}
+    Wait for Text       Do you notice no dial tone on all phones, or just on one phone?
+    Click Element and Take ScreenShot      ${Allphones}
+    Wait for Text       Do you currently have power at your residence?
+    Click Element and Take ScreenShot      ${Yes}
+    Wait for Text       We are about to run a line test that may take 2 minutes or more
+    Click Element and Take ScreenShot      ${RunTest}
+    Wait For Text       Evaluating Line Test Results
+    Sleep     10s
+
 NDT Prompt 23 to Prompt 19 flow
     Sleep  10s
     Wait For Text
