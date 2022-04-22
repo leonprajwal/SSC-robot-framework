@@ -2,7 +2,7 @@
 Resource    ../Resources/Config.robot
 Suite Setup      Run Keywords       Delete Screenshots
 ...     AND      Token Genaration
-#Test Setup    Given open a ssc Application
+Test Setup    Given Launch a ssc Application  # open a ssc Application      #
 Test Teardown    Error ScreenShot
 Suite Teardown   Run Keywords    Remove screenshots from Output
 #...    AND       Close Browser
@@ -23,15 +23,17 @@ Sanity on Voice Flow CRIS
     When I Hear a noise while using phone -Cris
     #Then I Reschedule and cancel appointment
 #    Reschedule a appointment
-#    Cancel the appointment
+#  Cancel the appointment
 
 Santiy on CCO Cris
     When I am not able to call out-cris
-    Then I Reschedule and cancel appointment
+    #Then I Reschedule and cancel appointment
+    #Reschedule a appointment
+    #Cancel the appointment
 
 Santiy on CCO Ensable
     When I am not able to call out-ensable
-    Then I Reschedule and cancel appointment
+    #Then I Reschedule and cancel appointment
 
 Sanity on Voice Flow Ensable
     [Tags]    Santiy Check on Noise
@@ -40,7 +42,7 @@ Sanity on Voice Flow Ensable
 
 Sanity on NDT Flow Cris
     When I have no dial tone
-    Then I Reschedule and cancel appointment
+    #Then I Reschedule and cancel appointment
 
 Sanity on Internet Flow
     When My internet isn't connected

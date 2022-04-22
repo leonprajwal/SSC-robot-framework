@@ -60,7 +60,7 @@ ${Noskiptonextrepair}           id:Noskiptonextrepair
 ${Nocontinue}                   id:Nocontinue
 #Voice
 #${Voice}                    xpath://*[@id="voice"]/div[1]/h4/a
-${Voice}                     xpath://*[@id="voice"]/div[1]/h4/a/i
+${Voice}                     xpath://*[@id="voice"]/div[1]/h4/a
 ${ONorFlashinggreen}            id:ONorFlashinggreen
 ${NO_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[2]/label/span
 ${Yes_radio}                 xpath://*[@id="workflow-question"]/div[2]/div[1]/label/span
@@ -72,7 +72,8 @@ ${My_Wireless}              xpath://a[@_mce_href="#sscTest/SSC_WIRELESS_FROM_LAN
 ${NoNoiseallcalls}          id:NoNoiseonallcalls
 ${Dialtonewithnoise}        id:Dialtonewithnoise
 
-${Allphones}                id:Allphones
+
+${Allphones}                id:AllPhones
 ${AllPhone}                 xpath://*[@id="AllPhones"]
 ${Onlywhenitrains}          id:Onlywhenitrains
 ${ScheduleNow}              id:ScheduleNow
@@ -96,7 +97,8 @@ ${YesIhavedialtone}         id:YesIhavedialtone
 ${Interferencesourcenotidentified}        id:Interferencesourcenotidentified
 ${Iacceptquotetoaddplan}        id:Iacceptquotetoaddplan
 ${YesIcanreceivecalls}       id:YesIcanreceivecalls
-${NoStillnothing}            id:NoStillnothing
+${Stillnothing}            id:Stillnothing
+${Nothing}              id:Nothing
 ${Nopluggedinphonehasneverworked}       id:Nopluggedinphonehasneverworked
 ${ScheduleaRepairTechnicianvisit}       id:ScheduleaRepairTechnicianvisit
 ${Nodialtoneonallphones}        id:Nodialtoneonallphones
@@ -119,9 +121,74 @@ ${Third_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/labe
 ${Fourth_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
 ${fifith_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
 ${Sixth_radio}             xpath://*[@id="workflow-question"]/div[2]/div[3]/label/span
+${Nothing_Radios}           xpath://*[@id="workflow-question"]/div[2]/div[6]/label/span
+${Nostillnotabletomakeacall}        id:Nostillnotabletomakeacall
 
 
 
 
 
+#Dashboard
+${Returntoclassicinterface}         id:Returntoclassicinterface
+${Continuewithnewinterface}         id:Continuewithnewinterface
+${internet_span}        id:internet-span
+${Voice_span}        id:voice-span
+${self_help_span}       id:self-help-span
+${self_help_email}        id:self-help-email-span
+${self_help_voicemail}      id:self-help-voicemail-span
+${SSC_Container}        id:ssc-container
 
+#Selfhelp speed
+${Speedissues}     xpath://*[@id="internet-tab"]/div[4]/div/ul[1]/li[2]/a
+${Speedissues_1}     xpath://*[@id="internet-tab"]/div[4]/div/ul[1]/li[3]/a
+
+#Modem Selfhelp
+${modemissues_1}     xpath://*[@id="internet-tab"]/div[4]/div/ul[3]/li[2]/a
+${modemissues_2}     xpath://*[@id="internet-tab"]/div[4]/div/ul[3]/li[3]/a
+${modemissues_3}     xpath://*[@id="internet-tab"]/div[4]/div/ul[3]/li[4]/a
+${modemissues_4}     xpath://*[@id="internet-tab"]/div[4]/div/ul[3]/li[5]/a
+
+${wifiissues_1}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[2]/a
+${wifiissues_2}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[3]/a
+${wifiissues_3}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[4]/a
+${wifiissues_4}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[5]/a
+${wifiissues_5}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[6]/a
+${wifiissues_6}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[7]/a
+${wifiissues_7}     xpath://*[@id="internet-tab"]/div[4]/div/ul[2]/li[8]/a
+
+${Securityissues_1}     xpath://*[@id="internet-tab"]/div[4]/div/ul[4]/li[2]/a
+${Securityissues_2}     xpath://*[@id="internet-tab"]/div[4]/div/ul[4]/li[3]/a
+${Securityissues_3}     xpath://*[@id="internet-tab"]/div[4]/div/ul[4]/li[4]/a
+${Securityissues_4}     xpath://*[@id="internet-tab"]/div[4]/div/ul[4]/li[5]/a
+${Securityissues_5}     xpath://*[@id="internet-tab"]/div[4]/div/ul[4]/li[6]/a
+
+${Voiceissues_1}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[1]/a
+${Voiceissues_2}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[2]/a
+${Voiceissues_3}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[3]/a
+${Voiceissues_4}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[4]/a
+${Voiceissues_5}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[5]/a
+${Voiceissues_6}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[6]/a
+${Voiceissues_7}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[7]/a
+${Voiceissues_8}       xpath://*[@id="voice-tab"]/div[3]/div/ul/li[8]/a
+
+${Access_Email_1}       xpath://*[@id="self-help-email-tab"]/div/div/ul[1]/li[2]/a
+${Access_Email_2}       xpath://*[@id="self-help-email-tab"]/div/div/ul[1]/li[3]/a
+${Access_Email_3}       xpath://*[@id="self-help-email-tab"]/div/div/ul[1]/li[4]/a
+
+${Email_Address_1}       xpath://*[@id="self-help-email-tab"]/div/div/ul[2]/li[2]/a
+${Email_Address_2}       xpath://*[@id="self-help-email-tab"]/div/div/ul[2]/li[3]/a
+${Email_Address_3}       xpath://*[@id="self-help-email-tab"]/div/div/ul[2]/li[4]/a
+
+${Password_email_1}       xpath://*[@id="self-help-email-tab"]/div/div/ul[3]/li[2]/a
+${Password_email_2}       xpath://*[@id="self-help-email-tab"]/div/div/ul[3]/li[3]/a
+${Password_email_3}       xpath://*[@id="self-help-email-tab"]/div/div/ul[3]/li[4]/a
+
+${Inboxissue_1}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[2]/a
+${Inboxissue_2}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[3]/a
+${Inboxissue_3}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[4]/a
+${Inboxissue_4}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[5]/a
+${Inboxissue_5}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[6]/a
+${Inboxissue_6}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[7]/a
+${Inboxissue_7}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[8]/a
+${Inboxissue_8}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[9]/a
+${Inboxissue_9}       xpath://*[@id="self-help-email-tab"]/div/div/ul[4]/li[10]/a

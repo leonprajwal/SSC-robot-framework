@@ -1,13 +1,5 @@
 
 *** Keywords ***
-Check the TN type
-    ${Auth}=     create list        ${username_api}    ${Pwd_api}
-    Create Session    mysession     ${Base_Url}    auth=${Auth}
-    ${response}=     GET On Session    mysession   ${Relative_Url}
-    ${Acc_info}=    Get From Dictionary      ${response.json()}     accountInformation
-    ${Tn_Type}=    Get From Dictionary      ${Acc_info}     legacyDispatchTerritory
-    [Return]  ${Tn_Type}
-
 open Chrome browser
     ${options}=    Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method    ${options}    add_argument    incognito
@@ -16,19 +8,32 @@ open Chrome browser
 
 Verify the Opening Content
     Wait for text      Data Line Test in Progress
+    Sleep   10s
+    Click Button       ${Returntoclassicinterface}
     Wait for text     Checking services
     Wait for text     Checking for pending repair tickets
     Wait for text     Checking for outages
 
+
+
+Check the TN type
+    ${Auth}=     create list        ${username_api}    ${Pwd_api}
+    Create Session    mysession     ${Base_Url}    auth=${Auth}
+    ${response}=     GET On Session    mysession   ${Relative_Url}
+    ${Acc_info}=    Get From Dictionary      ${response.json()}     accountInformation
+    ${Tn_Type}=    Get From Dictionary      ${Acc_info}     legacyDispatchTerritory
+    [Return]  ${Tn_Type}
+
 open a ssc Application
    Launch a ssc Application
-   Wait For Text       select the type of issue you are having
-   #Wait for text    Which service issue are you having?
+   #Wait For Text       select the type of issue you are having
+   Wait for text    Which service issue are you having?
 
 Launch a ssc Application
    open Chrome browser
    go to     ${SscTokenURL}${tokenGen}
-   #Verify the Opening Content
+  # Verify the Opening Content
+   Verify the Opening Content dashbord    ${Continuewithnewinterface}
 
 Token Genaration
     open Chrome browser
@@ -67,11 +72,19 @@ Schedule a Appointment
     #${Tn_Type}=       Check the TN type
     #Run Keyword IF    '${Tn_Type}'=='L-CTL' Schedule a technician for Ensable
 #    Schedule a technician for onlyphone cris
-    Wait for text     technician visit
+#    Wait for text     technician visit
+#    Sleep    5s
+#    Click Element and Take ScreenShot     ${Continue_Button}
+#    Wait for text       Checking history
+#    Wait for text       Finding appointment
+#    Yes Schedule a appointment
     Sleep    5s
-    Click Element and Take ScreenShot     ${Continue_Button}
+    Wait for text      Send a technician to identify the problem
+    Click Element and Take ScreenShot     ${Schedulenowandacceptpossiblecharges}
     Wait for text       Checking history
-    Wait for text       Finding appointment
+#    Wait for Text       Do you have another means of communicating while waiting for issue to be resolved?
+#    Click Element and Take ScreenShot     ${Yes}
+    Wait for Text       Finding appointment
     Yes Schedule a appointment
 
 Yes Schedule a appointment
@@ -136,12 +149,12 @@ Capture and compare screenshot
 
 Click Element and Take ScreenShot
     [Arguments]     ${Element}
-    ${But_Value}=    Get Value     ${Element}
-    ${But_Text}=    Get Text     ${Element}
-    Log to console    ${But_Text}
-    Log to console    ${But_Value}
+#    ${But_Value}=    Get Value     ${Element}
+#    ${But_Text}=    Get Text     ${Element}
+#    Log to console    ${But_Text}
+#    Log to console    ${But_Value}
     #${testcase}=    Get Testcase Name
-    Take Screenshot     ${EXECDIR}/ScreenShots/${testcase}click
+    Take Screenshot     ${EXECDIR}/ScreenShots/click
     Click Element   ${Element}
 
 Cancel the appointment
@@ -169,8 +182,8 @@ I Reschedule and cancel appointment
 
 Wait for text
      [Arguments]     ${Text}
-     Wait until Keyword succeeds     3min    2ms     Page Should Contain       ${Text}
-     Take Screenshot     ${EXECDIR}/ScreenShots/${testcase}Text
+     Wait until Keyword succeeds     3min    1ms     Page Should Contain       ${Text}   #loglevel=INFO
+     Take Screenshot     ${EXECDIR}/ScreenShots/Text
      
 My internet isn't connected
    Click Element and Take ScreenShot      ${Internet}
@@ -266,22 +279,25 @@ I am not able to call out-ensable
     Sleep   10s
     Click Element and Take ScreenShot     ${Cant_Call_Out}
     Wait for text       Are you able to receive calls?
-    Click Element and Take ScreenShot       ${YesIcanreceivecalls}
+    Click Element and Take ScreenShot       ${Yes}
     Wait for text        Please identify the type of number you are not able to call
     Select Radio Button     trouble         other
     Click Element and Take ScreenShot       ${Continue_Button}
     Sleep    10s
-    Wait for text       Are you not able to call out on all of your phones?
+    Wait for text       Are you unable to call out on all of your phones or just one?
     Click Element and Take ScreenShot       ${Allphones}
     Wait for text         What are you experiencing?
-    Select Radio Button     answer        Nothing
+    Sleep    10s
+    Click Element and Take ScreenShot       ${Nothing_Radios}
     Click Element and Take ScreenShot       ${Continue}
-    Wait for text         Do you hear dial tone now?
-    Click Element and Take ScreenShot       ${NoStillnothing}
+    Wait for text         This symptom indicate a possible problem with your phone or phone line
+    Click Element and Take ScreenShot       ${Stillnothing}
     Wait for text         Has this phone jack ever worked?
-    Click Element and Take ScreenShot       ${Nopluggedinphonehasneverworked}
+    Click Element and Take ScreenShot       ${Yes}
+    Wait for text    Did this resolve the issue?
+    Click Element and Take ScreenShot    ${Nostillnotabletomakeacall}
     Wait for text         Would you like to schedule a technician?
-    Click Element and Take ScreenShot       ${ScheduleaRepairTechnicianvisit}
+    Click Element and Take ScreenShot   ${ScheduleNow}
     Schedule a Appointment
 
 I have no dial tone
@@ -357,8 +373,8 @@ Ticket Creation on Voice flow with outages
 Exit Flow
     Sleep    10s
     Click Element and Take ScreenShot     ${Exit_Button}
-    Wait for text      Problem Type :HCKP
-    Click Element and Take Screenshot    ${Continue_Button}
+#    Wait for text      Problem Type :HCKP
+#    Click Element and Take Screenshot    ${Continue_Button}
     Wait for text      Closing Session
     Wait For Text       Thank you for using
     Sleep      10s
